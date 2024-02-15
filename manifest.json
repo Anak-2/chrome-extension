@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "semware picon",
+    "version": "1.0",
+    "description": "Custom extension for specific actions",
+    "permissions": [
+      "activeTab",
+      "https://math2dm.mathfreeon.com/"
+    ],
+    "browser_action": {
+      "default_icon": "picon.png",
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "48": "picon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "commands": {
+      "executeAction": {
+        "suggested_key": {
+          "default": "Ctrl+Q"
+        },
+        "description": "Execute Custom Action"
+      }
+    }
+  }
+  
